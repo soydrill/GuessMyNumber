@@ -7,14 +7,15 @@ using namespace std;
 
 int main()
 {
-	cout << endl << endl;
-	int guess;
+	cout << "\n\nI have a number behind my back. ";
+	int guess = 0;
 	int actual = rand();
 	bool keepgoing = true;
 	char answer;
-	while (keepgoing == true)
+
+	while (keepgoing)
 	{
-		cout << "I have a number behind my back. Try to guess my number. Guess: ";
+		cout << "Try to guess my number. Guess: ";
 		cin >> guess;
 		cout << "\nYou entered " << guess << ".\n\n";
 		
@@ -23,25 +24,24 @@ int main()
 			cout << "Your guess, " << guess << ", is less than my number!" << endl;
 		}
 
-		if (guess == actual)
+		else if (guess == actual)
 		{
 			cout << "You guessed correctly, well done!";
 			break;
 		}
 
-		if (guess > actual)
+		else if (guess > actual)
 		{
 			cout << "Your guess, " << guess << ", is greater than my number!" << endl;
 		}
 
-		cout << endl << endl;
-
-		cout << "Do you wish to guess again (Y/N)?  ";
+		cout << "\n\nDo you wish to guess again (Y/N)? ";
 		cin >> answer;
-		cout << endl << endl;
+		cout << "\n\n";
 
 		if (answer == 'n' || answer == 'N')
 		{
+			cout << "Okay, have a great day!";
 			keepgoing = false;
 		}
 
